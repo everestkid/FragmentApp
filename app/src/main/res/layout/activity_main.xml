@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/open_dialog_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Open Dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_a" />
+
+    <Button
         android:id="@+id/button_a"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Fragment A"
@@ -19,7 +29,7 @@
 
     <Button
         android:id="@+id/button_b"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Fragment B"
         app:layout_constraintBaseline_toBaselineOf="@+id/button_a"
@@ -30,13 +40,13 @@
     <FrameLayout
         android:id="@+id/container_fl"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="400dp"
         android:background="#97CEF8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_a">
+        app:layout_constraintTop_toBottomOf="@+id/open_dialog_btn">
 
     </FrameLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
